@@ -2,17 +2,11 @@
 """
 Created on Sat Jan  5 22:43:26 2019
 
-This file includes the preprocess on the data and model training
+This file includes the preprocess on the data and model training of xgboost
 
 @author: Hui Cai
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jan  2 08:26:16 2019
-
-@author: Hui Cai
-"""
 import numpy as np
 import pandas as pd
 #import seaborn as sns
