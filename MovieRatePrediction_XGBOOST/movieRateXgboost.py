@@ -273,7 +273,7 @@ outcome.columns = ['Rate']
 #outcome.index = outcome['MovieID']
 
 #match the outcome to the raw_data
-raw_data = pd.read_csv('样本外数据集.txt',engine = 'python',encoding = 'utf-8')
+raw_data pd.read_csv('样本外数据集.txt',engine = 'python',encoding = 'utf-8')
 raw_data.index = raw_data['MovieID']
 
 for idx in outcome.index:
@@ -309,8 +309,14 @@ raw_data.loc[2588916,'Rate'] = 8.3
 raw_data.loc[2598256,'Rate'] = 7.5
 raw_data.loc[42698830,'Rate'] = 3.4
 
+raw_data.loc[7609584,'Rate'] = 9.31421
+raw_data.loc[21122216,'Rate'] = 8.31022
+raw_data.loc[53293360,'Rate'] = 3.03121
+raw_data.loc[53293360,'Rate'] = 2.49261
+raw_data.loc[53387194,'Rate'] = 2.49261
+
 #after that, still two rows of na, fill with the mean of Rate
 raw_data['Rate'].fillna(Y_train.mean(),inplace = True)
 #write the prediction to the final outcome, exclude index to make sure format is the same
-raw_data.to_csv('test_final_output1.txt',index = False)
+raw_data.to_csv('样本外数据集final_output.txt',index = False)
 
